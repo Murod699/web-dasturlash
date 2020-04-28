@@ -337,44 +337,20 @@
             </div>
         </div>
         <div class="blog-grids row mt-5">
+        @foreach($posts as $post)
             <div class="col-lg-4 col-md-6 col-sm-12 blog-grid" id="zoomIn">
                 <a href="#blog-single.html">
                     <figure><img src="assets/images/blog.jpg" class="img-fluid" alt=""></figure>
                 </a>
                 <div class="blog-info">
-                    <h3><a href="#blog-single.html">4 Steps To Consider Before You Start</a> </h3>
+                    <h3><a href="#blog-single.html">{{$post->title}}</a> </h3>
                     <ul>
                         <li><a href="#author"><span class="fa fa-user-o mr-2"></span>Johnson smith</a></li>
                         <li><span class="fa fa-calendar mr-2"></span>Jan 16, 2020</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mt-md-0 mt-4 blog-grid" id="zoomIn">
-                <a href="#blog-single.html">
-                    <figure><img src="assets/images/blog1.jpg" class="img-fluid" alt=""></figure>
-                </a>
-                <div class="blog-info">
-                    <h3><a href="#blog-single.html">Strategic Plan Execution Management</a> </h3>
-                    <ul>
-                        <li><a href="#author"><span class="fa fa-user-o mr-2"></span>Alexander</a></li>
-                        <li><span class="fa fa-calendar mr-2"></span>Jan 19, 2020</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-0 mt-4 blog-grid" id="zoomIn">
-                <a href="#blog-single.html">
-                    <figure><img src="assets/images/blog2.jpg" class="img-fluid" alt=""></figure>
-                </a>
-                <div class="blog-info">
-                    <h3><a href="#blog-single.html">Business planning, strategy and execution</a> </h3>
-                    <ul>
-                        <li><a href="#author"><span class="fa fa-user-o mr-2"></span>Elizabeth ker</a></li>
-                        <li><span class="fa fa-calendar mr-2"></span>Jan 21, 2020</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+            @endforeach
 </section>
 <!-- //homepage blog grids -->
 

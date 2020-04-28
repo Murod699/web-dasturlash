@@ -5,7 +5,7 @@
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">
             Maqolalar
-            <a class="btn btn-sm btn-primary float-right" href="#">Yaratish</a>
+            <a class="btn btn-sm btn-primary float-right" href="{{route('admin.posts.create')}}">Yaratish</a>
         </h6>
         
     </div>
@@ -25,7 +25,7 @@
                 @foreach($posts as $post)
                 <tr>
                     <td>
-                <img class="img img-thumbnail" width="80px" src="" alt="{{ $post->title }}">
+                <img class="img img-thumbnail" width="80px" src="/storage/{{$post->img }}" alt="{{ $post->title }}">
                     </td>
                     <td> {{$post->title}}  </td>
                     <td>{{$post->created_at->format('H:i d/m/Y')}}</td>
