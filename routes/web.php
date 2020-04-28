@@ -17,3 +17,11 @@ Route::get('/', 'SiteController@home')->name('home');
 Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/services', 'SiteController@services')->name('services');
 Route::get('/contact', 'SiteController@contact')->name('contact');
+//Admin route
+Route::namespace('Admin')->prefix('admin')->group(function(){
+    Route::get('/', function(){
+        return redirect()->route('admin.posts.index');
+    })->name('dashboard');
+//Posts
+Route::resource('posts', 'PostsController');
+});
