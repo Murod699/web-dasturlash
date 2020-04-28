@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
+use Image;
 
 class PostsController extends Controller
 {
@@ -40,7 +41,24 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+
+            'title'=> 'required',
+            'short'=> 'required',
+            'content'=> 'required',
+            'img' => 'required|file|mimes:jpeg,jpg,png'
+        ]);
+        //Upload image to storage
+        $img_name = $request->file('img')->store('posts', ['disk' => 'public']);
+
+        Post::create([
+            'title' => $request->post('title'),
+            'short' => $request->post('short'),
+            'content' => $request->post('content'),
+            'img' => $img_name            
+        ]);
+
+        return redirect()->route('admin.posts.index')->with('success', 'Item created!');
     }
 
     /**
