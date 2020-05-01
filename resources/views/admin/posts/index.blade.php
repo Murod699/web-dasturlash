@@ -31,16 +31,16 @@
                     <td>{{$post->created_at->format('H:i d/m/Y')}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                         <a target="_blank" href="#" class="btn btn-primary">
+                         <a target="_blank" href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary">
                          <i class="fa fa-eye"></i>Ko'rish</a>
                             <div class="btn-group" role="group">
                                 <button id="btnGroupDrop1" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('admin.posts.edit', $post->id)}}">
                                     <i class="fa fa-edit"></i> Taxrirlash
                                     </a>   
-                                    <form method="POST" action="#">
+                                    <form method="POST" action="{{route('admin.posts.destroy', $post->id)}}">
                                     @csrf
                                     @method('DELETE')
                                     <button class="dropdown-item" type="submit"><i class="fa fa-trash"></i>O`chirish</button>

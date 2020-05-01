@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Post;
 use Image;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -83,7 +84,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        
+        return view('admin.posts.show', compact('post'));
     }
 
     /**
@@ -94,7 +97,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**
@@ -106,7 +111,46 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $request->validate([
+            'title' => 'required',
+            'short' => 'required',
+            'content' => 'required|min:15'
+        ]);
+        if($request->file('img')){
+            //Delete old file
+            Storage::disk('public')->delete([
+                $post ->img,
+                $post ->thumb
+            ]);
+         //Upload image to storage
+         $img_name = $request->file('img')->store('posts', ['disk' => 'public']);
+         $thumb_name = 'thumbs/'.$img_name;
+         //Create thumbnail
+         $full_path = storage_path('app/public/'.$img_name);
+         $full_thumb_path = storage_path('app/public/'.$thumb_name);
+         $thumb = Image::make($full_path);
+         //Kvadrat qilib qirqish;
+        $thumb->fit(300,300, function($constraint){
+            $constraint->aspectRatio();            
+        })->save($full_thumb_path);
+        }   
+        else{
+            $img_name = $post->img;
+            $thumb_name = $post->thumb;
+        }
+        
+        
+        $post->update([
+            'title' => $request->post('title'),
+            'short' => $request->post('short'),
+            'content' => $request->post('content'),
+            'img' => $img_name,
+            'thumb' => $thumb_name           
+        ]);
+
+        return redirect()->route('admin.posts.index')->with('success', 'Item created!');
+        
     }
 
     /**
@@ -117,6 +161,10 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $model = Post::findOrFail($id);
+
+        $model -> delete();
+
+        return redirect()->route('admin.posts.index')->with('delete', 'Item delete!');
     }
 }
