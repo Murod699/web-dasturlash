@@ -25,7 +25,7 @@
                 @foreach($posts as $post)
                 <tr>
                     <td>
-                <img class="img img-thumbnail" width="80px" src="/storage/{{$post->img }}" alt="{{ $post->title }}">
+                <img class="img img-thumbnail" width="80px" src="{{'/storage/'.$post->thumb }}" alt="{{ $post->title }}">
                     </td>
                     <td> {{$post->title}}  </td>
                     <td>{{$post->created_at->format('H:i d/m/Y')}}</td>
