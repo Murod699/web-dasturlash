@@ -9,7 +9,7 @@ class SiteController extends Controller
 {
     public function home()
     {
-        $posts = Post::orderBy('id', 'DESC')->paginate(2);
+        $posts = Post::latest()->paginate(3);
         $links = $posts->links();
         return view('home', compact('posts', 'links'));
         

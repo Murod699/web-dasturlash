@@ -18,8 +18,8 @@
 <!-- site header -->
 <header id="site-header" class="fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="index.html">
-          <span class="fa fa-shield"></span> Captivate
+      <a class="navbar-brand" href="{{route('home')}}">
+          <span class="fa fa-shield"></span> Biznes_markaz
       </a>
       <button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -30,16 +30,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav m-auto">
               <li class="nav-item active">
-                  <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{route('home')}}">Bosh sahifa<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{route('about')}}">About</a>
+                  <a class="nav-link" href="{{route('about')}}">Haqida</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{route('services')}}">Services</a>
+                  <a class="nav-link" href="{{route('services')}}">Xizmatlar</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{route('contact')}}">Contact</a>
+                  <a class="nav-link" href="{{route('contact')}}">Aloqa</a>
               </li>
           </ul>
       </div>

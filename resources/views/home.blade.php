@@ -16,8 +16,8 @@
                     adipisicing
                     elit.</p>
                 <div class="mt-5">
-                    <a class="btn btn-primary btn-style mr-2" href="about.html">Read More </a>
-                    <a class="btn btn-outline btn-outline-style" href="services.html">Our Services </a>
+                    <a class="btn btn-primary btn-style mr-2" href="{{route('about')}}">Haqida...</a>
+                    <a class="btn btn-outline btn-outline-style" href="{{route('services')}}">Xizmatlar</a>
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 col-sm-12 order-first text-lg-left text-center">
@@ -330,27 +330,32 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                <h4 class="section-title">Company News</h4>
-                <p class="text-center">There are many variations of passages of Lorem Ipsum available, but the majority
-                    have
-                    suffered alteration in some form, by injected humour</p>
+                <h4 class="section-title">Kompaniya yangiliklari</h4>
+                
             </div>
         </div>
-        <div class="blog-grids row mt-5">
-        @foreach($posts as $post)
-            <div class="col-lg-4 col-md-6 col-sm-12 blog-grid" id="zoomIn">
+        <div class="blog-grids row">
+            @foreach($posts as $post)
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 blog-grid" id="zoomIn">
                 <a href="#blog-single.html">
-                    <figure><img src="assets/images/blog.jpg" class="img-fluid" alt=""></figure>
+                    <figure><img src="{{'/storage/'.$post->thumb }}" class="img-fluid" alt="{{$post->title}}"></figure>
                 </a>
                 <div class="blog-info">
                     <h3><a href="#blog-single.html">{{$post->title}}</a> </h3>
                     <ul>
-                        <li><a href="#author"><span class="fa fa-user-o mr-2"></span>Johnson smith</a></li>
-                        <li><span class="fa fa-calendar mr-2"></span>Jan 16, 2020</li>
+                        <li><a href="#author"><span class="fa fa-user-o mr-2"></span>Admin</a></li>
+                        <li><span class="fa fa-calendar mr-2"></span>{{$post->created_at->format('M:d, H:i')}}</li>
                     </ul>
                 </div>
+                
             </div>
             @endforeach
+            
+        </div>
+        <nav class="blog-pagination justify-content-center d-flex">
+            {{ $posts->links() }}
+            </nav>
+    </div>
 </section>
 <!-- //homepage blog grids -->
 
