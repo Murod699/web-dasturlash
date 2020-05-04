@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Feedback;
 
 class SiteController extends Controller
 {
@@ -29,5 +30,23 @@ class SiteController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+    public function FeedbackStore(Request $request)
+    {
+        $request->validate([
+            'name'=>'required|min:3',
+            'email'=>'required|email|',
+            'subject'=>'required|min:10|max:100',
+            'message'=>'required|max:2048'
+        ]);
+        Feedback::create([
+            'name'=>$request->post('name'),
+            'email'=>$request->post('email'),
+            'subject'=>$request->post('subject'),
+            'message'=>$request->post('message')
+        ]);
+        return redirect()
+                    ->route('contact')
+                    ->with('success', 'Xabar uchun raxmat! Tez orada sizga javob qaytaramiz!');
     }
 }

@@ -17,6 +17,8 @@ Route::get('/', 'SiteController@home')->name('home');
 Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/services', 'SiteController@services')->name('services');
 Route::get('/contact', 'SiteController@contact')->name('contact');
+Route::POST('/contact', 'SiteController@feedbackStore')->name('contact.store');
+
 //Admin route
 Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     Route::get('/', function(){
