@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <link rel="stylesheet" href="/assets/css/style-starter.css">
 
 </head>
 
@@ -136,18 +136,18 @@
 <!-- //move top -->
 
 <!-- javascript -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="/assets/js/jquery-3.3.1.min.js"></script>
 
 <!-- libhtbox -->
-<script src="assets/js/lightbox-plus-jquery.min.js"></script>
+<script src="/assets/js/lightbox-plus-jquery.min.js"></script>
 
 <!-- particles -->
-<script src='assets/js/particles.min.js'></script>
-<script src="assets/js/script.js"></script>
+<script src='/assets/js/particles.min.js'></script>
+<script src="/assets/js/script.js"></script>
 <!-- //particles -->
 
 <!-- owl carousel -->
-<script src="assets/js/owl.carousel.js"></script>
+<script src="/assets/js/owl.carousel.js"></script>
 <script>
   $(document).ready(function () {
     var owl = $('.owl-carousel');
@@ -181,7 +181,7 @@
 <!-- disable body scroll which navbar is in active -->
 
 <!-- bootstrap -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>

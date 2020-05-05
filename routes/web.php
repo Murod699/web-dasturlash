@@ -20,10 +20,15 @@ Route::get('/contact', 'SiteController@contact')->name('contact');
 Route::POST('/contact', 'SiteController@feedbackStore')->name('contact.store');
 
 //Admin route
-Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
+Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('admin')->group(function(){
     Route::get('/', function(){
         return redirect()->route('admin.posts.index');
     })->name('dashboard');
 //Posts
 Route::resource('posts', 'PostsController');
 });
+
+Auth::routes([
+    'register'=> false
+]);
+
