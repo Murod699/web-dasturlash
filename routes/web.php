@@ -26,6 +26,12 @@ Route::namespace('Admin')->middleware('auth')->name('admin.')->prefix('admin')->
     })->name('dashboard');
 //Posts
 Route::resource('posts', 'PostsController');
+//Feedbacks
+Route::get('feedbacks', 'FeedbacksController@index')->name('feedbacks.index');
+Route::get('feedbacks/{id}/show', 'FeedbacksController@show')->name('feedbacks.show');
+Route::delete('feedbacks/{id}/delete', 'FeedbacksController@delete')->name('feedbacks.delete');
+
+
 });
 
 Auth::routes([
