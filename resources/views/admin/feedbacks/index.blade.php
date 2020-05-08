@@ -15,7 +15,7 @@
                 <th>To'liq nomi</th>
                 <th>Mavzu</th>
                 <th>Vaqti</th>
-                <th>Holat</th>
+                <th width="50px" >Holat</th>
                 <th width="180px">Amallar</th>
             </thead>
             <tbody>
@@ -25,7 +25,7 @@
                     <td>{{$item->name}}</td>
                     <td>{{$item->subject}}</td>
                     <td>{{$item->created_at->format('H:i d/m/Y')}}</td>
-                    <td>{{$item->status ? 'O`qilgan' : 'O`qilmagan'}}</td>
+                    <td><i class="fas fa-{{$item->status ? 'envelope-open' : 'envelope'}}"></i></td>
                     <td>
                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                          <a href="{{route('admin.feedbacks.show', $item->id)}}" class="btn btn-primary">
