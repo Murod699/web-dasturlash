@@ -33,7 +33,7 @@ $new_messages = Feedback::unreaded()->get();
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin.posts.index')}}">
         
         <div class="sidebar-brand-text mx-3">{{env('APP_NAME', 'Sayt')}}</div>
       </a>
@@ -187,7 +187,7 @@ $new_messages = Feedback::unreaded()->get();
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span> &copy; {{env('APP_NAME', 'WEB-SAYT')}} 2020</span>
           </div>
         </div>
       </footer>
@@ -209,17 +209,17 @@ $new_messages = Feedback::unreaded()->get();
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Boshqaruvdan chiqasizmi?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Agar tizimdan chiqmoqchi bo'lsangiz "HA" tugmasini bosing!</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Qaytish</button>
          <form action="{{route('logout')}}" method="POST">
          @csrf
-         <button type="submit" class="btn btn-primary">Logout</button>
+         <button type="submit" class="btn btn-primary">Ha</button>
          </form>
         </div>
       </div>
