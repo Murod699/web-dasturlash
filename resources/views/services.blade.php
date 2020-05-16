@@ -8,8 +8,8 @@
 </section>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-padding">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Services</li>
+        <li class="breadcrumb-item"><a href="{{route('home')}}">Bosh sahifa</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Xizmatlar</li>
     </ol>
 </nav>
 <!-- service page breadcrumns -->
@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                    <h4 class="section-title">What we provide</h4>
+                    <h4 class="section-title">Biz Nimani Taqdim Etamiz</h4>
                     <p class="text-center">There are many variations of passages of Lorem Ipsum available, but the majority
                         have
                         suffered alteration in some form, by injected humour</p>
@@ -28,7 +28,7 @@
             </div>
             <div class="row main-cont-wthree-2 mt-5">
                 <div class="col-lg-6 feature-grid-left order2 mt-lg-0 mt-sm-5 mt-4">
-                    <h4 class="title-left">A Productivity Platform</h4>
+                    <h4 class="title-left">Hosildorlik Platformasi</h4>
                     <p class="text-para">Curabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed, lacinia est.
                         Quisque ut lectus consequat, venenatis eros et, commodo risus. Nullam sit amet laoreet elit.
                         Suspendisse non magna a velit imperdiet efficitur. </p>
@@ -43,7 +43,7 @@
                     <img src="assets/images/s2.png" class="img-fluid img-shadow" alt="services">
                 </div>
                 <div class="col-lg-6 feature-grid-left mt-lg-0 mt-sm-5 mt-4">
-                    <h4 class="title-left">Performance Analyze</h4>
+                    <h4 class="title-left">Ish Faoliyatini Tahlil Qilish</h4>
                     <p class="text-para">Curabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed, lacinia est.
                         Quisque ut lectus consequat, venenatis eros et, commodo risus. Nullam sit amet laoreet elit.
                         Suspendisse non magna a velit imperdiet efficitur. </p>
@@ -61,7 +61,7 @@
         <div class="container">
             <div class="row main-cont-wthree-2">
                 <div class="col-lg-6 feature-grid-left">
-                    <h4 class="section-title-left">Learn the features of our Beautiful lifestyle Business!</h4>
+                    <h4 class="section-title-left">Bizning Go'zal Turmush Tarzimiz Biznesining Xususiyatlarini Bilib Oling!</h4>
                     <p class="text-para">Curabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed, lacinia est.
                         Quisque ut lectus consequat, venenatis eros et, commodo risus. Nullam sit amet laoreet elit.
                         Suspendisse non magna a velit imperdiet efficitur. </p>
@@ -70,7 +70,7 @@
                         <li><span class="fa fa-check"></span> Quisque ut lectus consequat, venenatis eros et amet</li>
                         <li><span class="fa fa-check"></span> Fusce eget ex fermentum, ultricies nisi ac sed</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary btn-style mt-4">Contact us</a>
+                    <a href="{{route('contact')}}" class="btn btn-primary btn-style mt-4">Biz bilan aloqa</a>
                 </div>
                 <div class="col-lg-6 feature-grid-right mt-lg-0 mt-5">
                     <div class="call-grids-w3 d-grid">
@@ -109,7 +109,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                    <h4 class="section-title">Simpler. Smarter. Faster.</h4>
+                    <h4 class="section-title">Oddiyroq. Aqlli. Tezroq.</h4>
                     <p class="text-center">There are many variations of passages of Lorem Ipsum available, but the
                         majority
                         have suffered alteration in some form, by injected humour</p>
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="col-10 mobile-right-info">
-                            <h6><a href="#url">Performance Analyze</a></h6>
+                            <h6><a href="#url">Ish faoliyatini tahlil qilish</a></h6>
                             <p>Lorem ipsum dolor sit amet,Ea sed illum facere aperiam sequi optio consectetur
                                 adipisicing elit.</p>
                         </div>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                         <div class="col-10 mobile-right-info">
-                            <h6><a href="#url">Self-Healing</a></h6>
+                            <h6><a href="#url">O'z-o'zini davolash</a></h6>
                             <p>Lorem ipsum dolor sit amet,Ea sed illum facere aperiam sequi optio consectetur
                                 adipisicing elit.</p>
                         </div>
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <div class="col-10 mobile-right-info">
-                            <h6><a href="#url">Work With Any Team</a></h6>
+                            <h6><a href="#url">Har qanday jamoa bilan ishlash</a></h6>
                             <p>Lorem ipsum dolor sit amet,Ea sed illum facere aperiam sequi optio consectetur
                                 adipisicing elit.</p>
                         </div>

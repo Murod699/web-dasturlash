@@ -57,38 +57,25 @@
         <div class="col-lg-4">
           <div class="footer-logo mb-3">
             <a href="index.html">
-              <span class="fa fa-shield"></span> Captivate
+              <span class="fa fa-shield"></span> Biznes_markaz
             </a>
           </div>
           <div>
-            <p class="">Lorem ipsum dolor, sit amet consectet et adipis icing elit. Ab commodi iure minus
-              laboriosam
-              placeat quia, dolorem animi. Eveniet repudiandae, perferendis nesciunt deserunt iure et, consequatur
-              optio!</p>
+            <p class="">«Zo'r qopqon yarating va butun dunyo sizning eshiklaringiz tomon yo'l
+                    topib keladi!»</p>
           </div>
         </div>
         <!-- Quick Links -->
         <div class="col-lg-3 col-md-4 mt-lg-0 mt-5">
-          <h4 class="footer-title">Quick Links</h4>
+          <h4 class="footer-title">Tez havolalar</h4>
           <ul class="footer-list">
-            <li><a href="about.html"> About company</a></li>
-            <li><a href="services.html"> Explore services</a></li>
-            <li><a href="#work"> How does we Work?</a></li>
-            <li><a href="#projects"> View projects</a></li>
+            <li><a href="{{route('about')}}"> Biz haqimizda</a></li>
+            <li><a href="{{route('services')}}"> Xizmatlar</a></li>
+            <li><a href="{{route('contact')}}"> Aloqa</a></li>
+            
           </ul>
         </div>
-        <!-- Newsletter -->
-        <div class="col-lg-5 col-md-8 mt-lg-0 mt-5">
-          <h4 class="footer-title">Newsletter</h4>
-          <p class="mb-4">By subscribing to our mailing list you will always be updated with the latest news from us.
-          </p>
-          <form class="newsletter-form">
-            <input class="input-rounded" type="text" required="" placeholder="Enter Email Address">
-            <button type="submit" title="Subscribe" class="btn btn-primary btn-style" name="submit" value="Submit">
-              Subscribe
-            </button>
-          </form>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -96,14 +83,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 text-lg-left text-center mb-lg-0 mb-3">
-          <p class="copyright">© 2020 Captivate. All Rights Reserved. Design by <a
-            href="https://w3layouts.com/">W3Layouts</a></p>
+          <p class="copyright">© 2020 BIZNES_MARKAZ</p>
         </div>
-        <div class="col-lg-4 align-center text-lg-right text-center">
-          <a href="#facebook" class="social-item"><span class="fa fa-facebook-f"></span></a>
-          <a href="#twitter" class="social-item"><span class="fa fa-twitter"></span></a>
-          <a href="#linkedin" class="social-item"><span class="fa fa-linkedin"></span></a>
-        </div>
+        
       </div>
     </div>
   </div>
