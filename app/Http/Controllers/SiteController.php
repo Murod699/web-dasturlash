@@ -16,8 +16,18 @@ class SiteController extends Controller
         
         
     }
-    public function newsMore(){
-        return view('newsMore');
+    public function newsMore($id){
+        
+        $post = Post::findOrFail($id);
+
+        $post->increment('views');
+
+        $most_viewed = Post::mostViews()->get();
+
+        return view('batafsil',[
+            'post'=>$post,
+            'most_posts'=>$most_viewed
+        ]);
     }
     public function about()
     {

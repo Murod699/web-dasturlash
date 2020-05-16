@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'SiteController@home')->name('home');
+Route::get('/batafsil/{id}', 'SiteController@newsMore')->name('batafsil');
 Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/services', 'SiteController@services')->name('services');
 Route::get('/contact', 'SiteController@contact')->name('contact');
